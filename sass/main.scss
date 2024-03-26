@@ -1,0 +1,56 @@
+@use "values";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  nav {
+    padding: 0 values.$spacing30 0 values.$spacing30;
+    width: 100%;
+    height: values.$headerHeight;
+    display: flex;
+    align-items: center;
+
+    #logoContainer {
+      width: 30%;
+    }
+
+    #navLinksContainer {
+      width: 70%;
+      display: flex;
+      justify-content: flex-end;
+      gap: values.$spacing30;
+
+      .navLink {
+        color: values.$base-font-color;
+        text-decoration: none;
+        font-size: values.$font-medium;
+        font-family: "Alegreya", serif;
+        font-weight: values.$font-weight-medium;
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - (values.$headerHeight + values.$footerHeight));
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+footer {
+  width: 100%;
+  height: values.$footerHeight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: values.$base-font-color;
+  font-size: values.$font-small;
+}
