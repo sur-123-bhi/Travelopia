@@ -8,28 +8,27 @@
 
 header {
   nav {
-    padding: 0 values.$spacing30 0 values.$spacing30;
-    width: 100%;
-    height: values.$headerHeight;
-    display: flex;
-    align-items: center;
+    @extend %navbar-shared;
 
-    #logoContainer {
-      width: 30%;
+    .logoContainer {
+      width: fit-content;
+      @extend %commonFlexProperties;
+
+      h1 {
+        color: values.$base-font-color;
+        font-size: values.$font-30;
+      }
     }
 
     #navLinksContainer {
-      width: 70%;
+      width: fit-content;
       display: flex;
       justify-content: flex-end;
       gap: values.$spacing30;
 
       .navLink {
-        color: values.$base-font-color;
-        text-decoration: none;
+        @extend %commonLinksStyles;
         font-size: values.$font-medium;
-        font-family: "Alegreya", serif;
-        font-weight: values.$font-weight-medium;
       }
     }
   }
@@ -38,19 +37,18 @@ header {
 main {
   width: 100%;
   height: calc(100vh - (values.$headerHeight + values.$footerHeight));
-
   img {
-    width: 100%;
+    width: 100vw;
     height: 100%;
+    object-fit: cover;
+    object-position: 0 100%;
   }
 }
 
 footer {
   width: 100%;
   height: values.$footerHeight;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %commonFlexProperties;
   color: values.$base-font-color;
   font-size: values.$font-small;
 }
