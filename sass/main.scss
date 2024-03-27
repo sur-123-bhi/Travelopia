@@ -120,8 +120,32 @@ main {
     }
 
     #alertMsgButton {
-      @extend %buttonCss;
+      @extend %roundedButtonStyle;
       color: values.$base-font-color;
+    }
+  }
+
+  #alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: none;
+    border-radius: values.$radius-small;
+    color: values.$base-font-color;
+    padding: values.$spacing30;
+    text-align: center;
+    #alertText {
+      font-size: values.$font-40;
+      margin-bottom: values.$spacing20;
+    }
+    #alertCloseBtn {
+      color: white;
+      @extend %roundedButtonStyle;
+      width: 50%;
+      background-color: values.$base-font-color;
     }
   }
 }
@@ -158,6 +182,12 @@ footer {
         font-size: values.$font-40;
       }
     }
+
+    #alert {
+      #alertText {
+        font-size: values.$font-large;
+      }
+    }
   }
 }
 
@@ -180,6 +210,12 @@ footer {
       }
       #postTextLarge {
         font-size: values.$font-30;
+      }
+    }
+
+    #alert {
+      #alertText {
+        font-size: values.$font-large;
       }
     }
   }
