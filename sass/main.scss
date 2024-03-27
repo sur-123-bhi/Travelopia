@@ -36,6 +36,7 @@ header {
 
 main {
   width: 100%;
+  float: left;
   height: calc(100vh - (values.$headerHeight + values.$footerHeight));
   position: relative;
 
@@ -46,16 +47,38 @@ main {
     object-position: 0 100%;
   }
 
-  #overlay-parent-container {
+  #opacityContainer {
     width: 100%;
     height: 100%;
     @extend %commonPositioning;
+    background-color: values.$overlay-color;
+    opacity: 60%;
+  }
 
-    #opacityContainer {
-      width: 100%;
-      height: 100%;
-      background-color: values.$overlay-color;
-      opacity: 60%;
+  #contentContainer {
+    width: 100%;
+    height: 100%;
+    @extend %commonFlexProperties;
+    @extend %commonPositioning;
+    gap: values.$spacing20;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+
+    #preTextSmall {
+      font-family: "Raleway", sans-serif;
+      font-size: values.$font-medium;
+      margin: 0 values.$spacing20;
+    }
+
+    #postTextLarge {
+      font-size: values.$font-50;
+      margin: 0 values.$spacing20;
+    }
+
+    #alertMsgButton {
+      @extend %buttonCss;
+      color: values.$base-font-color;
     }
   }
 }
@@ -66,4 +89,48 @@ footer {
   @extend %commonFlexProperties;
   color: values.$base-font-color;
   font-size: values.$font-small;
+}
+
+//Media query for toggling navlinks visibility and resizing font size of post content text and padding
+@media screen and (max-width: 850px) {
+  header {
+    nav {
+      padding: 0 values.$spacing20 0 values.$spacing20;
+      #navLinksContainer {
+        display: none;
+      }
+    }
+  }
+
+  main {
+    #contentContainer {
+      #postTextLarge {
+        font-size: values.$font-40;
+      }
+    }
+  }
+}
+
+//Media query for resizing logo and font size of pre and post content text
+@media screen and (max-width: 650px) {
+  header {
+    nav {
+      .logoContainer {
+        h1 {
+          font-size: values.$font-large;
+        }
+      }
+    }
+  }
+
+  main {
+    #contentContainer {
+      #preTextSmall {
+        font-size: values.$font-small;
+      }
+      #postTextLarge {
+        font-size: values.$font-30;
+      }
+    }
+  }
 }
