@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travelopia</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="sass/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@NaN,0,0,0"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logoContainer">
+          <img src="imageAndLogo/plane_logo.svg" alt="plane_logo" />
+          <h1>Travelopia</h1>
+        </div>
+
+        <div id="navLinksContainer">
+          <a class="navLink" href="#">Home</a>
+          <a class="navLink" href="#">About Us</a>
+          <a class="navLink" href="#">Our Brands</a>
+        </div>
+
+        <div id="dropdownContainer">
+          <button id="dropdownMenuBtn">
+            <img
+              id="menu_icon"
+              src="imageAndLogo/menu_icon.svg"
+              alt="menu_icon"
+            />
+          </button>
+
+          <div id="dropdownMenuItemContainer">
+            <div id="dropdownMenuNavbar">
+              <div class="logoContainer">
+                <img src="imageAndLogo/plane_logo.svg" alt="plane_logo" />
+                <h1>Travelopia</h1>
+              </div>
+              <button id="dropdownMenuCloseBtn">
+                <img src="imageAndLogo/close_icon.svg" alt="close_icon" />
+              </button>
+            </div>
+
+            <div id="dropdownMenuLinksContainer">
+              <a class="navLink" href="#">Home</a>
+              <a class="navLink" href="#">About Us</a>
+              <a class="navLink" href="#">Our Brands</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <img src="imageAndLogo/sea.jpeg" alt="tourist place image" />
+      <div id="opacityContainer"></div>
+      <div id="contentContainer">
+        <p id="preTextSmall">THE WORLD'S LEADING COLLECTION OF</p>
+        <p id="postTextLarge">EXPERIENTIAL TRAVEL BRANDS</p>
+        <button id="alertMsgButton">Click Here</button>
+      </div>
+
+      <div id="alert">
+        <p id="alertText">Hello! World...</p>
+        <button id="alertCloseBtn">OK</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>All rights reserved © 2024</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
 </html>

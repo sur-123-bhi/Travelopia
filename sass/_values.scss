@@ -1,0 +1,65 @@
+//dimensions
+$headerHeight: 100px;
+$footerHeight: 100px;
+$spacing30: 30px;
+$spacing20: 20px;
+$spacing10: 10px;
+
+//colors
+$base-font-color: #62620f;
+$overlay-color: rgb(70, 118, 31);
+
+//font sizes
+$font-small: 16px;
+$font-medium: 18px;
+$font-large: 25px;
+$font-30: 30px;
+$font-40: 40px;
+$font-50: 50px;
+
+//font weight
+$font-weight-medium: 500;
+
+//border Radius
+$radius-medium: 25px;
+$radius-small: 15px;
+
+// shared ui components
+%navbar-shared {
+  padding: 0 $spacing30 0 $spacing30;
+  width: 100%;
+  height: $headerHeight;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%commonLinksStyles {
+  color: $base-font-color;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: $font-weight-medium;
+}
+
+%commonPositioning {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+%commonFlexProperties {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%roundedButtonStyle {
+  padding: $spacing10 $spacing20;
+  font-size: $font-medium;
+  border-radius: $radius-medium;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  cursor: pointer;
+}

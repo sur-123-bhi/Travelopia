@@ -1,0 +1,221 @@
+@use "values";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  nav {
+    @extend %navbar-shared;
+
+    .logoContainer {
+      width: fit-content;
+      @extend %commonFlexProperties;
+
+      h1 {
+        color: values.$base-font-color;
+        font-size: values.$font-30;
+      }
+    }
+
+    #navLinksContainer {
+      width: fit-content;
+      display: flex;
+      justify-content: flex-end;
+      gap: values.$spacing30;
+
+      .navLink {
+        @extend %commonLinksStyles;
+        font-size: values.$font-medium;
+      }
+    }
+
+    #dropdownContainer {
+      display: none;
+      width: fit-content;
+      height: fit-content;
+
+      #dropdownMenuBtn {
+        display: none;
+        background: none;
+        border: none;
+      }
+
+      #dropdownMenuItemContainer {
+        width: 100%;
+        height: 100vh;
+        display: none;
+        background-color: white;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 0;
+
+        #dropdownMenuNavbar {
+          @extend %navbar-shared;
+
+          #dropdownMenuCloseBtn {
+            background: none;
+            border: none;
+          }
+        }
+
+        #dropdownMenuLinksContainer {
+          padding: 0 values.$spacing20;
+          a {
+            @extend %commonLinksStyles;
+            display: block;
+            text-align: left;
+            margin: values.$spacing20 0;
+            font-size: values.$font-large;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 100%;
+  float: left;
+  height: calc(100vh - (values.$headerHeight + values.$footerHeight));
+  position: relative;
+
+  img {
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 100%;
+  }
+
+  #opacityContainer {
+    width: 100%;
+    height: 100%;
+    @extend %commonPositioning;
+    background-color: values.$overlay-color;
+    opacity: 60%;
+  }
+
+  #contentContainer {
+    width: 100%;
+    height: 100%;
+    @extend %commonFlexProperties;
+    @extend %commonPositioning;
+    gap: values.$spacing20;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+
+    #preTextSmall {
+      font-family: "Raleway", sans-serif;
+      font-size: values.$font-medium;
+      margin: 0 values.$spacing20;
+    }
+
+    #postTextLarge {
+      font-size: values.$font-50;
+      margin: 0 values.$spacing20;
+    }
+
+    #alertMsgButton {
+      @extend %roundedButtonStyle;
+      color: values.$base-font-color;
+    }
+  }
+
+  #alert {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: none;
+    border-radius: values.$radius-small;
+    color: values.$base-font-color;
+    padding: values.$spacing30;
+    text-align: center;
+    #alertText {
+      font-size: values.$font-40;
+      margin-bottom: values.$spacing20;
+    }
+    #alertCloseBtn {
+      color: white;
+      @extend %roundedButtonStyle;
+      width: 50%;
+      background-color: values.$base-font-color;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: values.$footerHeight;
+  @extend %commonFlexProperties;
+  color: values.$base-font-color;
+  font-size: values.$font-small;
+}
+
+//Media query for toggling navlinks and dropdown menu visibility and resizing font size of post content text and padding
+@media screen and (max-width: 850px) {
+  header {
+    nav {
+      #navLinksContainer {
+        display: none;
+      }
+
+      #dropdownContainer {
+        display: block;
+        #dropdownMenuBtn {
+          display: block;
+        }
+      }
+    }
+  }
+
+  main {
+    #contentContainer {
+      #postTextLarge {
+        font-size: values.$font-40;
+      }
+    }
+
+    #alert {
+      #alertText {
+        font-size: values.$font-large;
+      }
+    }
+  }
+}
+
+//Media query for resizing logo and font size of pre and post content text
+@media screen and (max-width: 650px) {
+  header {
+    nav {
+      .logoContainer {
+        h1 {
+          font-size: values.$font-large;
+        }
+      }
+    }
+  }
+
+  main {
+    #contentContainer {
+      #preTextSmall {
+        font-size: values.$font-small;
+      }
+      #postTextLarge {
+        font-size: values.$font-30;
+      }
+    }
+
+    #alert {
+      #alertText {
+        font-size: values.$font-large;
+      }
+    }
+  }
+}

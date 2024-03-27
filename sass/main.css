@@ -1,0 +1,198 @@
+header nav, header nav #dropdownContainer #dropdownMenuItemContainer #dropdownMenuNavbar {
+  padding: 0 30px 0 30px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav #navLinksContainer .navLink, header nav #dropdownContainer #dropdownMenuItemContainer #dropdownMenuLinksContainer a {
+  color: #62620f;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+main #opacityContainer, main #contentContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+header nav .logoContainer, main #contentContainer, footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main #contentContainer #alertMsgButton, main #alert #alertCloseBtn {
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header nav .logoContainer {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header nav .logoContainer h1 {
+  color: #62620f;
+  font-size: 30px;
+}
+header nav #navLinksContainer {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+header nav #navLinksContainer .navLink {
+  font-size: 18px;
+}
+header nav #dropdownContainer {
+  display: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+header nav #dropdownContainer #dropdownMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+}
+header nav #dropdownContainer #dropdownMenuItemContainer {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  background-color: white;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+}
+header nav #dropdownContainer #dropdownMenuItemContainer #dropdownMenuNavbar #dropdownMenuCloseBtn {
+  background: none;
+  border: none;
+}
+header nav #dropdownContainer #dropdownMenuItemContainer #dropdownMenuLinksContainer {
+  padding: 0 20px;
+}
+header nav #dropdownContainer #dropdownMenuItemContainer #dropdownMenuLinksContainer a {
+  display: block;
+  text-align: left;
+  margin: 20px 0;
+  font-size: 25px;
+}
+
+main {
+  width: 100%;
+  float: left;
+  height: calc(100vh - 200px);
+  position: relative;
+}
+main img {
+  width: 100vw;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 100%;
+     object-position: 0 100%;
+}
+main #opacityContainer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(70, 118, 31);
+  opacity: 60%;
+}
+main #contentContainer {
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+main #contentContainer #preTextSmall {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  margin: 0 20px;
+}
+main #contentContainer #postTextLarge {
+  font-size: 50px;
+  margin: 0 20px;
+}
+main #contentContainer #alertMsgButton {
+  color: #62620f;
+}
+main #alert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  display: none;
+  border-radius: 15px;
+  color: #62620f;
+  padding: 30px;
+  text-align: center;
+}
+main #alert #alertText {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+main #alert #alertCloseBtn {
+  color: white;
+  width: 50%;
+  background-color: #62620f;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  color: #62620f;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 850px) {
+  header nav #navLinksContainer {
+    display: none;
+  }
+  header nav #dropdownContainer {
+    display: block;
+  }
+  header nav #dropdownContainer #dropdownMenuBtn {
+    display: block;
+  }
+  main #contentContainer #postTextLarge {
+    font-size: 40px;
+  }
+  main #alert #alertText {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 650px) {
+  header nav .logoContainer h1 {
+    font-size: 25px;
+  }
+  main #contentContainer #preTextSmall {
+    font-size: 16px;
+  }
+  main #contentContainer #postTextLarge {
+    font-size: 30px;
+  }
+  main #alert #alertText {
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=main.css.map */
