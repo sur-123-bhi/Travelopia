@@ -14,6 +14,12 @@ header nav #navLinksContainer .navLink {
   font-weight: 500;
 }
 
+main #overlay-parent-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 header nav .logoContainer, footer {
   display: flex;
   justify-content: center;
@@ -48,6 +54,7 @@ header nav #navLinksContainer .navLink {
 main {
   width: 100%;
   height: calc(100vh - 200px);
+  position: relative;
 }
 main img {
   width: 100vw;
@@ -56,6 +63,16 @@ main img {
      object-fit: cover;
   -o-object-position: 0 100%;
      object-position: 0 100%;
+}
+main #overlay-parent-container {
+  width: 100%;
+  height: 100%;
+}
+main #overlay-parent-container #opacityContainer {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(70, 118, 31);
+  opacity: 60%;
 }
 
 footer {

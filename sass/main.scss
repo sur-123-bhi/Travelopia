@@ -37,11 +37,26 @@ header {
 main {
   width: 100%;
   height: calc(100vh - (values.$headerHeight + values.$footerHeight));
+  position: relative;
+
   img {
     width: 100vw;
     height: 100%;
     object-fit: cover;
     object-position: 0 100%;
+  }
+
+  #overlay-parent-container {
+    width: 100%;
+    height: 100%;
+    @extend %commonPositioning;
+
+    #opacityContainer {
+      width: 100%;
+      height: 100%;
+      background-color: values.$overlay-color;
+      opacity: 60%;
+    }
   }
 }
 
