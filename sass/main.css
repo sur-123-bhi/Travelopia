@@ -86,7 +86,7 @@ header nav #dropdownContainer #dropdownMenuItemContainer #dropdownMenuNavbar #dr
   border: none;
 }
 header nav #dropdownContainer #dropdownMenuItemContainer #dropdownMenuLinksContainer {
-  padding: 0 20px;
+  padding: 0 30px;
 }
 header nav #dropdownContainer #dropdownMenuItemContainer #dropdownMenuLinksContainer a {
   display: block;

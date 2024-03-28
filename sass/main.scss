@@ -63,7 +63,7 @@ header {
         }
 
         #dropdownMenuLinksContainer {
-          padding: 0 values.$spacing20;
+          padding: 0 values.$spacing30;
           a {
             @extend %commonLinksStyles;
             display: block;
