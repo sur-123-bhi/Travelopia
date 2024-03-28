@@ -66,6 +66,28 @@ Travelopia is an experiential travel brand website, showcasing a collection of t
 <br/>
 <br/>
 
+### Installation
+I didn't use any library, you can simply use it after cloning it.
+
+```bash
+git clone https://github.com/sur-123-bhi/Travelopia.git
+cd project
+
+## Folder Structure
+project/
+│
+├── /imagesAndLogoFolder/                 
+├── /sass/
+│      ├──_value.scss
+│      ├──main.scss
+│      ├──main.css.map
+│      ├──main.css
+│   ├── index.html         # HTML entry point
+│   ├── index.js
+│   ├── README.md              # Project overview and instructions
+
+
+
 ## Complementary Aspects
 - **Consistency:** The header and footer maintain consistency across different pages (assumed) for a uniform user experience.
 - **Responsive Design:** Use of responsive CSS (assumed from main.scss) ensures the website is accessible across various devices.
