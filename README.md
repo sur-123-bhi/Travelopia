@@ -4,7 +4,7 @@
 Travelopia is an experiential travel brand website, showcasing a collection of travel services and experiences.
 
 ## Deployed Link - 
-https://travelopia-nu.vercel.app/
+<a href='https://travelopia-psi.vercel.app/' target='_blank'>Link of deployed web page</a>
 
 ## Design Overview
 - **Theme and Style:** The website adopts a modern, user-friendly interface with a focus on travel imagery and easy navigation.
@@ -29,6 +29,42 @@ https://travelopia-nu.vercel.app/
 
 4. **Footer:**
    - Simple footer with copyright information.
+
+
+## Screenshots - 
+
+### Desktop View
+
+![WhatsApp Image 2024-03-28 at 2 06 38 PM](https://github.com/sur-123-bhi/Travelopia/assets/129533897/58e48fc4-9c8c-40c3-beb7-d19e1d3894f2)
+
+<br/>
+
+![WhatsApp Image 2024-03-28 at 2 06 38 PM (1)](https://github.com/sur-123-bhi/Travelopia/assets/129533897/6b1b0885-1ad0-40a9-90a5-6071056e82d2)
+
+<br/>
+<br/>
+
+### Tab View
+
+![WhatsApp Image 2024-03-28 at 1 54 58 PM](https://github.com/sur-123-bhi/Travelopia/assets/129533897/a7b9c549-0089-41f6-b43d-e3e03d456108)
+
+<br/>
+
+![WhatsApp Image 2024-03-28 at 1 55 04 PM](https://github.com/sur-123-bhi/Travelopia/assets/129533897/2025dd26-4a3b-4b75-8107-54f9bae0a084)
+
+<br/>
+<br/>
+
+### Mobile View
+
+![Screenshot_2024-03-28-13-33-28-128_com android chrome](https://github.com/sur-123-bhi/Travelopia/assets/129533897/ea18ff9f-7401-4eec-b40d-53f5b8b19b15)
+
+<br/>
+
+![Screenshot_2024-03-28-14-07-32-017_com android chrome (1)](https://github.com/sur-123-bhi/Travelopia/assets/129533897/a74ac2f3-0701-4666-8625-1e1d2746dd07)
+
+<br/>
+<br/>
 
 ## Complementary Aspects
 - **Consistency:** The header and footer maintain consistency across different pages (assumed) for a uniform user experience.
