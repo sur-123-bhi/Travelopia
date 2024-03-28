@@ -4,7 +4,7 @@
 Travelopia is an experiential travel brand website, showcasing a collection of travel services and experiences.
 
 ## Deployed Link - 
-<a href='https://travelopia-psi.vercel.app/' target='_blank'>Link of deployed web page</a>
+<a href="https://travelopia-psi.vercel.app/" target="_blank">Link of deployed web page</a>
 
 ## Design Overview
 - **Theme and Style:** The website adopts a modern, user-friendly interface with a focus on travel imagery and easy navigation.
